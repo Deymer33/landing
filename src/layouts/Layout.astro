@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Dei Arteta Software Solutions | Desarrollo Seguro. Tecnología que Cura.",
+  description = "Desarrollo de software a medida con estándares enterprise. Soluciones tecnológicas seguras para empresas colombianas. Del análisis al despliegue, con el respaldo que tu operación necesita."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Dei Arteta Software Solutions" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://deiarteta.com" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://deiarteta.com/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://deiarteta.com/og-image.png" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="Dei Arteta Software Solutions" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://deiarteta.com/" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://deiarteta.com/og-image.png" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#09090E" />
+    
+    <!-- Preconnect to font origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body class="bg-[#09090E] text-[#F5F5F7] font-[family-name:var(--font-body)] selection:bg-[#E8002D] selection:text-white">
+    <slot />
+    
+    <!-- Schema.org structured data for local business -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dei Arteta Software Solutions",
+        "description": "Desarrollo de software a medida con estándares enterprise para empresas colombianas",
+        "url": "https://deiarteta.com",
+        "email": "hola@deiarteta.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CO"
+        },
+        "serviceType": ["Software Development", "Web Development", "DevOps", "Cybersecurity"],
+        "areaServed": {
+          "@type": "Country",
+          "name": "Colombia"
+        },
+        "priceRange": "$$$"
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+---
+const servicios = [
+  {
+    icon: "code",
+    title: "Software a Medida",
+    description: "Sistemas core robustos construidos con tecnologías modernas para escalabilidad infinita.",
+    accent: "blue"
+  },
+  {
+    icon: "smart_toy",
+    title: "IA y Automatización",
+    description: "Integración de modelos LLM y agentes autónomos para optimizar procesos operativos críticos.",
+    accent: "red"
+  },
+  {
+    icon: "hub",
+    title: "Análisis y Arquitectura",
+    description: "Diseño de ecosistemas digitales pensados para la seguridad y el rendimiento extremo.",
+    accent: "blue"
+  },
+  {
+    icon: "settings_backup_restore",
+    title: "Modernización",
+    description: "Migración de sistemas legacy a arquitecturas cloud-native sin interrumpir la operación.",
+    accent: "red"
+  },
+  {
+    icon: "speed",
+    title: "Puesta en Marcha",
+    description: "Despliegue ágil y seguro garantizando disponibilidad y observabilidad desde el día 1.",
+    accent: "blue"
+  },
+  {
+    icon: "verified_user",
+    title: "Soporte Integral",
+    description: "Mantenimiento proactivo y evolución constante de sus activos digitales.",
+    accent: "red"
+  }
+];
+
+const iconMap: Record<string, string> = {
+  code: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+  smart_toy: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+  hub: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.414 1.414.586 3.414-1.414 3.414H12.83a2 2 0 01-1.414-.586l-5-5a2 2 0 00-1.414.586L8 10"/></svg>`,
+  settings_backup_restore: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`,
+  speed: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+  verified_user: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`
+};
+---
+
+<section class="py-24 bg-[#09090E]" id="servicios">
+  <div class="container mx-auto px-6">
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+      <div class="max-w-xl">
+        <h2 class="font-[family-name:var(--font-display)] font-black text-5xl md:text-6xl uppercase tracking-tighter mb-4">
+          LO QUE <span class="text-[#0057FF]">CONSTRUIMOS</span>
+        </h2>
+        <p class="font-[family-name:var(--font-body)] font-light text-white/60">Soluciones modulares diseñadas para resolver problemas complejos de negocio mediante arquitectura de alto nivel.</p>
+      </div>
+      <div class="font-[family-name:var(--font-mono)] text-xs text-[#0057FF]">LO_NUESTRO // 2025</div>
+    </div>
+    
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {servicios.map((servicio, index) => (
+        <div class={`group p-8 bg-[#111118] border border-white/[0.07] relative overflow-hidden transition-all hover:translate-y-[-4px] hover-glow-blue`}>
+          <!-- Background Icon (decorative) -->
+          <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+            <Fragment set:html={iconMap[servicio.icon]} />
+          </div>
+          
+          <!-- Icon -->
+          <div class={`mb-8 ${servicio.accent === 'blue' ? 'text-[#0057FF]' : 'text-[#E8002D]'}`}>
+            <Fragment set:html={iconMap[servicio.icon]} />
+          </div>
+          
+          <!-- Title -->
+          <h3 class="font-[family-name:var(--font-display)] font-bold text-2xl uppercase mb-4">{servicio.title}</h3>
+          
+          <!-- Description -->
+          <p class="text-white/60 font-[family-name:var(--font-body)] font-light leading-relaxed">{servicio.description}</p>
+          
+          <!-- Hover Line -->
+          <div class="mt-8 h-[2px] w-0 bg-[#0057FF] transition-all group-hover:w-full"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
