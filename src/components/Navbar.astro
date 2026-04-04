@@ -7,12 +7,12 @@ const navLinks = [
 ];
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-[#09090E]/80 backdrop-blur-xl border-b border-white/[0.07]">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#FAFAFA]/80 backdrop-blur-xl border-b border-black/[0.07]">
   <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
     <!-- Logo -->
     <a href="/" class="flex items-center gap-2 group">
-      <img src="/logo.webp" alt="Dei Arteta Software Solutions" class="h-10 w-auto" />
-      <span class="text-white/50 text-xs font-[family-name:var(--font-body)] font-light tracking-widest hidden md:inline">
+      <img src="/logo.webp" alt="Software Solutions Art" class="h-10 w-auto" />
+      <span class="text-black/50 text-xs font-[family-name:var(--font-body)] font-light tracking-widest hidden md:inline">
         SOFTWARE SOLUTIONS
       </span>
     </a>
@@ -22,7 +22,7 @@ const navLinks = [
       {navLinks.map((link) => (
         <a 
           href={link.href}
-          class="text-white/70 font-[family-name:var(--font-body)] font-light tracking-wide hover:text-[#E8002D] transition-colors duration-300"
+          class="text-black/70 font-[family-name:var(--font-body)] font-light tracking-wide hover:text-[#E8002D] transition-colors duration-300"
         >
           {link.label}
         </a>

@@ -8,16 +8,16 @@
 
 /* Extended theme configuration */
 @theme {
-  /* Colors - using design tokens from the brand */
-  --color-bg: #09090E;
-  --color-surface: #111118;
-  --color-surface-2: #1A1A24;
+  /* Colors - Light theme */
+  --color-bg: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F5F5F5;
   --color-red: #E8002D;
   --color-red-muted: #9B001E;
   --color-blue: #0057FF;
   --color-blue-muted: #003DB3;
-  --color-white: #F5F5F7;
-  --color-muted: #8A8A9A;
+  --color-text: #1A1A1A;
+  --color-muted: #6B6B6B;
   
   /* Font families */
   --font-display: 'Barlow Condensed', sans-serif;
@@ -35,7 +35,7 @@ html {
   scroll-behavior: smooth;
   font-family: var(--font-body);
   background-color: var(--color-bg);
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 body {
@@ -66,7 +66,7 @@ body {
 
 /* Utility classes */
 .text-gradient {
-  background: linear-gradient(90deg, var(--color-white) 0%, rgba(245, 245, 247, 0.4) 100%);
+  background: linear-gradient(90deg, var(--color-text) 0%, rgba(26, 26, 26, 0.4) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

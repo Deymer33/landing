@@ -23,18 +23,18 @@ const valores = [
 ];
 ---
 
-<section class="py-24 bg-[#09090E]">
+<section class="py-24 bg-[#FAFAFA]">
   <div class="container mx-auto px-6">
-    <h2 class="font-[family-name:var(--font-display)] font-black text-4xl uppercase tracking-tight mb-16 text-center">
+    <h2 class="font-[family-name:var(--font-display)] font-black text-4xl uppercase tracking-tight mb-16 text-center text-[#1A1A1A]">
       NUESTROS <span class="text-[#E8002D]">PRINCIPIOS</span>
     </h2>
     
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
       {valores.map((valor) => (
-        <div class="p-6 bg-[#111118] border border-white/[0.07] group hover:bg-[#1A1A24] transition-all hover:border-[#0057FF]/30">
+        <div class="p-6 bg-[#FFFFFF] border border-black/[0.07] group hover:bg-[#F5F5F5] transition-all hover:border-[#0057FF]/30">
           <span class="font-[family-name:var(--font-mono)] text-[10px] text-[#E8002D] block mb-4">{valor.number}. PRINCIPLE</span>
-          <h4 class="font-[family-name:var(--font-display)] font-bold text-xl uppercase mb-2">{valor.title}</h4>
-          <p class="text-white/50 text-sm font-[family-name:var(--font-body)]">{valor.description}</p>
+          <h4 class="font-[family-name:var(--font-display)] font-bold text-xl uppercase mb-2 text-[#1A1A1A]">{valor.title}</h4>
+          <p class="text-[#6B6B6B] text-sm font-[family-name:var(--font-body)]">{valor.description}</p>
         </div>
       ))}
     </div>

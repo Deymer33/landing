@@ -9,15 +9,15 @@ const footerLinks = [
 ];
 ---
 
-<footer class="bg-[#09090E] relative overflow-hidden">
+<footer class="bg-[#FAFAFA] relative overflow-hidden">
   <!-- Gradient Separator -->
   <div class="w-full h-[1px] bg-gradient-to-r from-[#E8002D] via-[#0057FF] to-transparent"></div>
   
   <div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-16 gap-8 max-w-7xl mx-auto">
     <!-- Logo & Description -->
     <div class="flex flex-col gap-4 items-center md:items-start">
-      <img src="/logo.webp" alt="Dei Arteta Software Solutions" class="h-8 w-auto" />
-      <p class="font-[family-name:var(--font-body)] font-light text-sm text-white/40 max-w-xs text-center md:text-left">
+      <img src="/logo.webp" alt="Software Solutions Art" class="h-8 w-auto" />
+      <p class="font-[family-name:var(--font-body)] font-light text-sm text-black/40 max-w-xs text-center md:text-left">
         Ingeniería de software de alto impacto diseñada y ejecutada desde Colombia para el mundo.
       </p>
     </div>
@@ -27,7 +27,7 @@ const footerLinks = [
       {footerLinks.map((link) => (
         <a 
           href={link.href}
-          class="text-white/60 font-[family-name:var(--font-body)] font-light text-sm hover:text-white transition-all opacity-80 hover:opacity-100"
+          class="text-black/60 font-[family-name:var(--font-body)] font-light text-sm hover:text-black transition-all opacity-80 hover:opacity-100"
         >
           {link.label}
         </a>
@@ -35,8 +35,8 @@ const footerLinks = [
     </div>
     
     <!-- Copyright -->
-    <div class="text-white/40 font-[family-name:var(--font-body)] font-light text-xs">
-      Dei Arteta Software Solutions © {currentYear} — Colombia
+    <div class="text-black/40 font-[family-name:var(--font-body)] font-light text-xs">
+      Software Solutions Art © {currentYear} — Colombia
     </div>
   </div>
 </footer>

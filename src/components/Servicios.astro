@@ -48,15 +48,15 @@ const iconMap: Record<string, string> = {
 };
 ---
 
-<section class="py-24 bg-[#09090E]" id="servicios">
+<section class="py-24 bg-[#FAFAFA]" id="servicios">
   <div class="container mx-auto px-6">
     <!-- Section Header -->
     <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
       <div class="max-w-xl">
-        <h2 class="font-[family-name:var(--font-display)] font-black text-5xl md:text-6xl uppercase tracking-tight mb-4">
+        <h2 class="font-[family-name:var(--font-display)] font-black text-5xl md:text-6xl uppercase tracking-tight mb-4 text-[#1A1A1A]">
           LO QUE <span class="text-[#0057FF]">CONSTRUIMOS</span>
         </h2>
-        <p class="font-[family-name:var(--font-body)] font-light text-white/60">Soluciones modulares diseñadas para resolver problemas complejos de negocio mediante arquitectura de alto nivel.</p>
+        <p class="font-[family-name:var(--font-body)] font-light text-[#6B6B6B]">Soluciones modulares diseñadas para resolver problemas complejos de negocio mediante arquitectura de alto nivel.</p>
       </div>
       <div class="font-[family-name:var(--font-mono)] text-xs text-[#0057FF]">LO_NUESTRO // 2025</div>
     </div>
@@ -64,7 +64,7 @@ const iconMap: Record<string, string> = {
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {servicios.map((servicio, index) => (
-        <div class={`group p-8 bg-[#111118] border border-white/[0.07] relative overflow-hidden transition-all hover:translate-y-[-4px] hover-glow-blue`}>
+        <div class={`group p-8 bg-[#FFFFFF] border border-black/[0.07] relative overflow-hidden transition-all hover:translate-y-[-4px] hover-glow-blue`}>
           <!-- Background Icon (decorative) -->
           <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
             <Fragment set:html={iconMap[servicio.icon]} />
@@ -76,10 +76,10 @@ const iconMap: Record<string, string> = {
           </div>
           
           <!-- Title -->
-          <h3 class="font-[family-name:var(--font-display)] font-bold text-2xl uppercase mb-4">{servicio.title}</h3>
+          <h3 class="font-[family-name:var(--font-display)] font-bold text-2xl uppercase mb-4 text-[#1A1A1A]">{servicio.title}</h3>
           
           <!-- Description -->
-          <p class="text-white/60 font-[family-name:var(--font-body)] font-light leading-relaxed">{servicio.description}</p>
+          <p class="text-[#6B6B6B] font-[family-name:var(--font-body)] font-light leading-relaxed">{servicio.description}</p>
           
           <!-- Hover Line -->
           <div class="mt-8 h-[2px] w-0 bg-[#0057FF] transition-all group-hover:w-full"></div>
